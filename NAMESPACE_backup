@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(tibble, tibble)
+importFrom(stringr, str_split)
+importFrom(dplyr, bind_cols)
+importFrom(purrr, map, reduce)
+importFrom(stats, setNames)
