@@ -18,6 +18,6 @@ A data frame with the original data and additional one-hot encoded columns.
 \code{ohe_multi_simple} performs one-hot encoding (OHE) by splitting a specified column into unique values.
 }
 \examples{
-data <- tibble(ID = 1:3, col = c("A,B", "B,C", "A"))
+data <- tibble::tibble(ID = 1:3, col = c("A,B", "B,C", "A"))
 ohe_multi_simple(data, "col")
 }

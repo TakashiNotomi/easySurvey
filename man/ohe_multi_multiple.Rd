@@ -18,6 +18,6 @@ A data frame with the original data and additional one-hot encoded columns.
 \code{ohe_multi_multiple} applies one-hot encoding (OHE) to multiple specified columns at once.
 }
 \examples{
-data <- tibble(ID = 1:3, col1 = c("A,B", "B,C", "A"), col2 = c("X,Y", "Y,Z", "X"))
+data <- tibble::tibble(ID = 1:3, col1 = c("A,B", "B,C", "A"), col2 = c("X,Y", "Y,Z", "X"))
 ohe_multi_multiple(data, c("col1", "col2"))
 }

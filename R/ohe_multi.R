@@ -4,12 +4,13 @@
 #' @param column_name A string specifying the column name to perform one-hot encoding on.
 #' @return A data frame with the original data and additional one-hot encoded columns.
 #' @importFrom stringr str_split str_detect
+#' @importFrom tibble tibble
 #' @importFrom dplyr bind_cols
 #' @importFrom purrr map
 #' @importFrom stats setNames
 #' @export
 #' @examples
-#' data <- tibble(ID = 1:3, col = c("A,B", "B,C", "A"))
+#' data <- tibble::tibble(ID = 1:3, col = c("A,B", "B,C", "A"))
 #' ohe_multi_simple(data, "col")
 
 ohe_multi_simple <- function(data, column_name) {
@@ -30,10 +31,11 @@ ohe_multi_simple <- function(data, column_name) {
 #' @param data A data frame containing the target data for one-hot encoding.
 #' @param columns A vector of strings specifying the column names to perform one-hot encoding on.
 #' @return A data frame with the original data and additional one-hot encoded columns.
+#' @importFrom tibble tibble
 #' @importFrom purrr reduce
 #' @export
 #' @examples
-#' data <- tibble(ID = 1:3, col1 = c("A,B", "B,C", "A"), col2 = c("X,Y", "Y,Z", "X"))
+#' data <- tibble::tibble(ID = 1:3, col1 = c("A,B", "B,C", "A"), col2 = c("X,Y", "Y,Z", "X"))
 #' ohe_multi_multiple(data, c("col1", "col2"))
 
 ohe_multi_multiple <- function(data, columns) {
