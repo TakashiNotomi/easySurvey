@@ -2,20 +2,20 @@
 % Please edit documentation in R/ohe_multi.R
 \name{ohe_multi_multiple}
 \alias{ohe_multi_multiple}
-\title{ワンホットエンコーディング（複数列）}
+\title{One-Hot Encoding (Multiple Columns)}
 \usage{
 ohe_multi_multiple(data, columns)
 }
 \arguments{
-\item{data}{データフレーム（ワンホットエンコーディングを行う対象のデータ）。}
+\item{data}{A data frame containing the target data for one-hot encoding.}
 
-\item{columns}{ワンホットエンコーディングを行う列名のベクトル（文字列）。}
+\item{columns}{A vector of strings specifying the column names to perform one-hot encoding on.}
 }
 \value{
-元のデータフレームにワンホットエンコーディングされた列を追加したデータフレーム。
+A data frame with the original data and additional one-hot encoded columns.
 }
 \description{
-\code{ohe_multi_multiple} 指定した複数列に対してワンホットエンコーディングを一括で適用します。
+\code{ohe_multi_multiple} applies one-hot encoding (OHE) to multiple specified columns at once.
 }
 \examples{
 data <- tibble(ID = 1:3, col1 = c("A,B", "B,C", "A"), col2 = c("X,Y", "Y,Z", "X"))

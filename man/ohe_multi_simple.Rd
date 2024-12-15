@@ -2,20 +2,20 @@
 % Please edit documentation in R/ohe_multi.R
 \name{ohe_multi_simple}
 \alias{ohe_multi_simple}
-\title{ワンホットエンコーディング（単一列）}
+\title{One-Hot Encoding (Single Column)}
 \usage{
 ohe_multi_simple(data, column_name)
 }
 \arguments{
-\item{data}{データフレーム（ワンホットエンコーディングを行う対象のデータ）。}
+\item{data}{A data frame containing the target data for one-hot encoding.}
 
-\item{column_name}{ワンホットエンコーディングを行う列の名前（文字列）。}
+\item{column_name}{A string specifying the column name to perform one-hot encoding on.}
 }
 \value{
-元のデータフレームにワンホットエンコーディングされた列を追加したデータフレーム。
+A data frame with the original data and additional one-hot encoded columns.
 }
 \description{
-\code{ohe_multi_simple} 指定した列をユニークな値ごとに分割し、ワンホットエンコーディング（OHE）を実施
+\code{ohe_multi_simple} performs one-hot encoding (OHE) by splitting a specified column into unique values.
 }
 \examples{
 data <- tibble(ID = 1:3, col = c("A,B", "B,C", "A"))

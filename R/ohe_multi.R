@@ -14,7 +14,7 @@
 
 ohe_multi_simple <- function(data, column_name) {
   unique_values <- data[[column_name]] |>
-    str_split(",\\s*|，\\s*") |>
+    str_split(",\\s*|\uFF0C\\s*") |>
     unlist() |>
     unique()
   ohe_df <- as.data.frame(
