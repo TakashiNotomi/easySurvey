@@ -1,8 +1,8 @@
-#' @title ワンホットエンコーディング（単一列）
-#' @description \code{ohe_multi_simple} 指定した列をユニークな値ごとに分割し、ワンホットエンコーディング（OHE）を実施
-#' @param data データフレーム（ワンホットエンコーディングを行う対象のデータ）。
-#' @param column_name ワンホットエンコーディングを行う列の名前（文字列）。
-#' @return 元のデータフレームにワンホットエンコーディングされた列を追加したデータフレーム。
+#' @title One-Hot Encoding (Single Column)
+#' @description \code{ohe_multi_simple} performs one-hot encoding (OHE) by splitting a specified column into unique values.
+#' @param data A data frame containing the target data for one-hot encoding.
+#' @param column_name A string specifying the column name to perform one-hot encoding on.
+#' @return A data frame with the original data and additional one-hot encoded columns.
 #' @importFrom stringr str_split str_detect
 #' @importFrom dplyr bind_cols
 #' @importFrom purrr map
@@ -25,11 +25,11 @@ ohe_multi_simple <- function(data, column_name) {
   bind_cols(data, ohe_df)
 }
 
-#' @title ワンホットエンコーディング（複数列）
-#' @description \code{ohe_multi_multiple} 指定した複数列に対してワンホットエンコーディングを一括で適用します。
-#' @param data データフレーム（ワンホットエンコーディングを行う対象のデータ）。
-#' @param columns ワンホットエンコーディングを行う列名のベクトル（文字列）。
-#' @return 元のデータフレームにワンホットエンコーディングされた列を追加したデータフレーム。
+#' @title One-Hot Encoding (Multiple Columns)
+#' @description \code{ohe_multi_multiple} applies one-hot encoding (OHE) to multiple specified columns at once.
+#' @param data A data frame containing the target data for one-hot encoding.
+#' @param columns A vector of strings specifying the column names to perform one-hot encoding on.
+#' @return A data frame with the original data and additional one-hot encoded columns.
 #' @importFrom purrr reduce
 #' @export
 #' @examples
